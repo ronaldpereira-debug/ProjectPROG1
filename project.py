@@ -46,7 +46,11 @@ def salvar_produtos(produtos): #Recebe uma lista e grava os dados no arquivo.
 
     with open(ARQUIVO, "w", encoding="utf-8") as arq: #Abre um arquivo com modo escrita "w", caso não exista será criado
         json.dump(produtos, arq, indent=4, ensure_ascii=False) # Formata o JSON com identação para facilitar a leitura.
-
+        #dump() pertence à biblioteca json e serve para gravar dados Python em um arquivo no formato JSON.
+        #2 parâmetros o primeiro produtos é o objeto que será salvo, todo conteúdo do produto é convertido para json.
+        #e o segundo parâmetro arq é uma referência ao arquivo produtos.json.
+        #Sem o ident tudo ficaria em 1 única linha, quando foi escrito ident=4 ficará todas as informações do produtos separados em 4 linhas, em ordem.
+        #ensure_ascii=False permite alguns caracteres como o ^, se não tivesse ou fosse = True iria sair \u00e2
 
 # ==========================================
 # Menu
@@ -74,6 +78,8 @@ def menu():
 
             if 0 <= opcao <= 8:
                 return opcao
+                #Se a opção escrita pelo usuário estiver entre 0 e 8 retorna o valor de opcao, se opcao for = 3 então return 3
+                #Isso será armazenado em op = menu()
 
             print("Opção inválida!")
 
