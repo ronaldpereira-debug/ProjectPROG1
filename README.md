@@ -92,3 +92,7 @@ shutil
 
 os
 *Biblioteca que permite manipular arquivos e diretórios.*
+
+O código foi contruído em etapas, cada função do código foi feita em ligação onde fomos pensando na lógica correta e consequentemente buscando a sintaxe para a lógica funcionar. Portanto, o código foi feito em conjunto em ligação em chamadas pelo Discord/Meet.
+
+Nenhum integrante do grupo teve uma função específca, código foi feito em conjunto em em algumas chamadas.
