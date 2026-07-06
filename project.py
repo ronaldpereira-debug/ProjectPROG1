@@ -249,6 +249,9 @@ def organizar():#Executa a exclusão física.
             ativos.append(p)
 
     salvar_produtos(ativos)#A nova lista substitui o arquivo anterior.
+    #open(ARQUIVO, "w") linha 47
+    #Apague o conteúdo atual do arquivo e escreva um novo conteúdo. Tudo que está salvo em ativos, será guardado, somente produtos não marcados com "*".
+    #Como estamos abrindo com modo "w" irá apagar o atual e escrever um novo conteúdo, mas salvamos em uma lista ativos [].
 
     print("\nArquivo organizado com sucesso!")
 
@@ -333,3 +336,6 @@ def main():#Controla o fluxo principal do programa.
 
 if __name__ == "__main__":#Verifica se o arquivo está sendo executado diretamente.
     main()#Inicia o sistema.
+    #__name__ É uma variável que informa como o arquivo está sendo executado.
+    #Só executará main() quando este arquivo for o programa principal.
+    #A razão pela qual temos 2 underlines antes e no fim da variável é que o Python reserva para indicar: Este é o módulo principal do programa.
